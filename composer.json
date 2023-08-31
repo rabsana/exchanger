@@ -1,0 +1,39 @@
+{
+    "name": "rabsana/exchanger",
+    "description": "This library is an interface to connect to exchangers like Binance,...",
+    "homepage": "https://github.com/rabsana/exchanger",
+    "type": "library",
+    "keywords": ["rabsana", "laravel", "exchanger", "binance", "kucoin"],
+    "license": "MIT",
+    "authors": [{
+        "name": "Sajjad Sisakhti",
+        "email": "sajjad.30sakhti@gmail.com",
+        "homepage": "https://rabsana.ir"
+    }],
+    "require": {
+        "rabsana/core": "^1.0",
+        "rabsana/php-binance-api": "^1.0",
+        "rabsana/kucoin-php-sdk": "~1.1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.20"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rabsana\\Exchanger\\": "src/",
+            "Rabsana\\Exchanger\\Database\\": "database/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rabsana\\Exchanger\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rabsana\\Exchanger\\Providers\\ExchangerServiceProvider"
+            ]
+        }
+    }
+}
