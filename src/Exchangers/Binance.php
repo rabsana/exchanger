@@ -71,7 +71,7 @@ class Binance extends BinanceLib implements Exchanger
 
                 $priceFilter = collect($validation['filters'])->where('filterType', 'PRICE_FILTER')->first();
                 $qtyFilter = collect($validation['filters'])->where('filterType', 'LOT_SIZE')->first();
-                $notionalFilter = collect($validation['filters'])->where('filterType', 'MIN_NOTIONAL')->first();
+                $notionalFilter = collect($validation['filters'])->where('filterType', 'NOTIONAL')->first();
 
                 $response[] = [
                     'symbol'        => $validation['symbol'],
